@@ -26,15 +26,15 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/bilibili/twirp/internal/gen"
-	"github.com/bilibili/twirp/internal/gen/stringutils"
-	"github.com/bilibili/twirp/internal/gen/typemap"
 	"github.com/golang/protobuf/proto"
 	"github.com/golang/protobuf/protoc-gen-go/descriptor"
 	"github.com/golang/protobuf/protoc-gen-go/generator"
 	plugin "github.com/golang/protobuf/protoc-gen-go/plugin"
 	"github.com/pkg/errors"
 	"github.com/pseudomuto/protokit"
+	"github.com/zak4nil/twirp/internal/gen"
+	"github.com/zak4nil/twirp/internal/gen/stringutils"
+	"github.com/zak4nil/twirp/internal/gen/typemap"
 )
 
 type twirp struct {
@@ -334,7 +334,7 @@ func (t *twirp) generateFileHeader(file *descriptor.FileDescriptorProto) {
 	if t.filesHandled == 0 {
 		t.P("/*")
 		t.P("Package ", t.genPkgName, " is a generated twirp stub package.")
-		t.P("This code was generated with github.com/bilibili/twirp/protoc-gen-twirp ", gen.Version, ".")
+		t.P("This code was generated with github.com/zak4nil/twirp/protoc-gen-twirp ", gen.Version, ".")
 		t.P()
 		comment, err := t.reg.FileComments(file)
 		if err == nil && comment.Leading != "" {
@@ -369,8 +369,8 @@ func (t *twirp) generateImports(file *descriptor.FileDescriptorProto) {
 	t.P()
 	t.P(`import `, t.pkgs["jsonpb"], ` "github.com/golang/protobuf/jsonpb"`)
 	t.P(`import `, t.pkgs["proto"], ` "github.com/golang/protobuf/proto"`)
-	t.P(`import `, t.pkgs["twirp"], ` "github.com/bilibili/twirp"`)
-	t.P(`import `, t.pkgs["ctxsetters"], ` "github.com/bilibili/twirp/ctxsetters"`)
+	t.P(`import `, t.pkgs["twirp"], ` "github.com/zak4nil/twirp"`)
+	t.P(`import `, t.pkgs["ctxsetters"], ` "github.com/zak4nil/twirp/ctxsetters"`)
 	t.P()
 
 	// It's legal to import a message and use it as an input or output for a

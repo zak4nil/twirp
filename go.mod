@@ -1,4 +1,4 @@
-module github.com/bilibili/twirp
+module github.com/zak4nil/twirp
 
 require (
 	github.com/davecgh/go-spew v1.1.1 // indirect

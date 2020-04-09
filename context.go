@@ -18,8 +18,8 @@ import (
 	"errors"
 	"net/http"
 
-	"github.com/bilibili/twirp/internal/contextkeys"
 	"github.com/golang/protobuf/proto"
+	"github.com/zak4nil/twirp/internal/contextkeys"
 )
 
 // MethodName extracts the name of the method being handled in the given

@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/bilibili/twirp/internal/gen"
+	"github.com/zak4nil/twirp/internal/gen"
 )
 
 func main() {

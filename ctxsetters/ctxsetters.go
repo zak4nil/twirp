@@ -23,8 +23,8 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/bilibili/twirp/internal/contextkeys"
 	"github.com/golang/protobuf/proto"
+	"github.com/zak4nil/twirp/internal/contextkeys"
 )
 
 func WithMethodName(ctx context.Context, name string) context.Context {
